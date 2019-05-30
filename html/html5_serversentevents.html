@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>HTML5. Server-Sent Events. Події, надіслані сервером. W3schools українською. Уроки для початківців</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML,CSS,уроки,для початківців,html5,server-sent events,повідомлення,події,надіслані,сервером,елемент,w3schools,українською,мовою" />
+    <meta name="description" content="Урок 55. HTML5. Server-sent events. Події, надіслані сервером. Для чого вони потрібні? Як використовують SSE? W3Schools українською. Підручник для початківців" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ws.css" />
+    <link rel="stylesheet" href="../styles/handheld.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/browserref.css">
+    <link rel="canonical" href="https://websunsay.github.io/" />
+    <meta property="og:title" content="HTML5. Server-Sent Events. Повідомлення, надіслані сервером. W3schools українською. Уроки для початківців" />
+    <meta property="og:type" content="веб-сайт" /> <!--описывает тип объекта на странице-->
+    <meta property="og:url" content="https://websunsay.github.io/" /><!--адрес сайта-->
+    <meta property="og:image" content="../image/html5_64x64.png" /><!--адрес картинки-->
+    <meta property="og:description" content="Урок 55. HTML5. Server-sent events. Події, надіслані сервером. Для чого вони потрібні? Як використовують SSE? W3Schools українською. Підручник для початківців" />
+    <meta property="og:locale" content="uk" /> <!--мова сайту-->
+    <meta property="og:site_name" content="WebSunSay - W3Schools українською - Основи HTML, CSS, JavaScript, PHP для початківців" />
+    <script src="../js/topnav.js"></script>
+</head>
+<body>
+<iframe src="../pages/header.html" class="frame-header"></iframe>
+<main>
+    <div class="left-sidebar">
+        <iframe src="../pages/basichtml.html" class="frame-left-sidebar"></iframe>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>HTML5. Server-Sent Events (SSE) - Події, надіслані сервером</h1>
+        <p class="brief"><strong>Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців</strong></p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_webworkers.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html_examples.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr>
+        <h2>Для чого потрібні Server-Sent Events (SSE) - Події, надіслані сервером?</h2>
+        <p class="intro">Події, надіслані сервером дозволяють веб-сторінці отримувати оновлення з сервера.</p>
+        <hr>
+        <h2>Події, надіслані сервером - це односторонні повідомлення</h2>
+        <p>Подія, надіслана сервером - це коли веб-сторінка автоматично отримує оновлення з сервера.</p>
+        <p>Це також було можливим і раніше, але на веб-сторінці потрібно було запитати, чи доступні оновлення. З подіями, надісланими сервером, оновлення надходять автоматично.</p>
+        <p>Приклади: Facebook/Twitter оновлення, оновлення цін на акції, стрічки новин, спортивні результати тощо.</p>
+        <hr>
+        <h2>Підтримка браузерами</h2>
+        <p>Цифри в таблиці визначають першу версію браузера, яка повністю підтримує події, надіслані сервером.</p>
+        <table class="browserref notranslate">
+            <tbody><tr>
+                <th style="width:14%;font-size:16px;text-align:left;">API</th>
+                <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+                <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:16%;" class="bsSafari" title="Safari"></th>
+                <th style="width:16%;" class="bsOpera" title="Opera"></th>
+            </tr>
+            <tr>
+                <td style="text-align:left;">SSE</td>
+                <td>6.0</td>
+                <td><span class="marked">Не підтримується</span></td>
+                <td>6.0</td>
+                <td>5.0</td>
+                <td>11.5</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>Отримувати сповіщення про надіслані сервером події</h2>
+        <p>Об'єкт EventSource використовується для отримання повідомлень про події, які надсилаються сервером:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black"><span class="jsnumbercolor" style="color:red">
+</span> <span class="jskeywordcolor" style="color:mediumblue">var</span> source = <span class="jskeywordcolor" style="color:mediumblue">new</span> EventSource(<span class="jsstringcolor" style="color:brown">"demo_sse.php"</span>);<br>source.<span class="jspropertycolor" style="color:black">onmessage</span> = <span class="jskeywordcolor" style="color:mediumblue">function</span>(<span class="jskeywordcolor" style="color:mediumblue">event</span>) {<br>&nbsp;&nbsp;document.<span class="jspropertycolor" style="color:black">getElementById</span>(<span class="jsstringcolor" style="color:brown">"result"</span>).<span class="jspropertycolor" style="color:black">innerHTML</span> += <span class="jskeywordcolor" style="color:mediumblue">event</span>.<span class="jspropertycolor" style="color:black">data</span> + <span class="jsstringcolor" style="color:brown">"&lt;br&gt;"</span>;<br>}; </span></div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_sse" target="_blank">Спробуйте самі »</a>
+        </div>
+        <p>Пояснення прикладу:</p>
+        <ul>
+            <li>Створіть новий об'єкт EventSource і вкажіть URL-адресу сторінки, що надсилає оновлення (у цьому прикладі "demo_sse.php")</li>
+            <li>Кожного разу при отриманні оновлення відбувається подія onmessage</li>
+            <li>Коли відбувається подія onmessage, помістіть отримані дані до елемента з id = "result"</li>
+        </ul>
+        <hr>
+        <h2>Перевірте підтримку подій, надісланих сервером</h2>
+        <p>В наведеному вище прикладі "Спробуйте самі" було кілька додаткових рядків коду для перевірки підтримки браузером подій, надісланих сервером:</p>
+        <div class="w3-code w3-border notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">if</span>(<span class="jskeywordcolor" style="color:mediumblue">typeof</span>(EventSource) !== <span class="jsstringcolor" style="color:brown">"undefined"</span>) {<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp; <span class="commentcolor" style="color:green">// Так! Server-sent events підтримується!<br></span><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp; <span class="commentcolor" style="color:green">// <i>Якийсь код.....</i><br></span><span class="jsnumbercolor" style="color:red">
+</span> }<span class="jsnumbercolor" style="color:red">
+</span> <span class="jskeywordcolor" style="color:mediumblue">else</span> {<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp; <span class="commentcolor" style="color:green">// Вибачте! Server-sent events не підтримується..<br></span><span class="jsnumbercolor" style="color:red">
+</span> }
+ </span></div>
+        <hr>
+        <h2>Приклад коду на стороні сервера</h2>
+        <p>Для наведеного вище прикладу потрібен сервер, який може надсилати оновлення даних (наприклад, PHP або ASP).</p>
+        <p>Синтаксис потоку подій на стороні сервера простий. Встановіть заголовок "Content-Type" на "text/event-stream". Тепер ви можете почати відправляти потоки подій.</p>
+        <p><strong>Код на PHP</strong> (demo_sse.php):</p>
+        <div class="w3-code w3-border notranslate htmlHigh"><div>
+ <span class="phpcolor" style="color:black"><span class="phptagcolor" style="color:red">&lt;?php</span><br>header(<span class="phpstringcolor" style="color:brown">'Content-Type: text/event-stream'</span>);<br><span class="phpnumbercolor" style="color:red">
+</span> header(<span class="phpstringcolor" style="color:brown">'Cache-Control: no-cache'</span>);<br><br>$time = date(<span class="phpstringcolor" style="color:brown">'r'</span>);<br><span class="phpkeywordcolor" style="color:mediumblue">echo</span> <span class="phpstringcolor" style="color:brown">"data: The server time is: {$time}\n\n"</span>;<br>flush();<br><span class="phptagcolor" style="color:red">?&gt;</span></span>
+        </div> </div>
+        <p><strong>Код на ASP (VB)</strong> (demo_sse.asp):</p>
+        <div class="w3-code w3-border notranslate" style="color:brown;"><div>
+            &lt;%<br>Response.ContentType = "text/event-stream"<br>Response.Expires = -1<br>
+            Response.Write("data: The server time is: " &amp; now())<br>Response.Flush()<br>%&gt;
+        </div></div>
+        <p>Пояснення коду:</p>
+        <ul>
+            <li>Встановіть заголовок "Content-Type" в "text/event-stream"</li>
+            <li>Вкажіть, що сторінка не повинна кешуватись (not cache)</li>
+            <li>Виведіть дані, які потрібно надіслати (<strong>Завжди</strong> починати з "data: ")</li>
+            <li>Скиньте вихідні дані назад на веб-сторінку</li>
+        </ul>
+        <hr>
+        <h2>Об'єкт EventSource</h2>
+        <p>У наведених вище прикладах ми використовували подію <em>onmessage</em> для отримання повідомлень. Але доступні й інші події:</p>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:20%">Події</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td>onopen</td>
+                <td>Коли відкрито з'єднання з сервером</td>
+            </tr>
+            <tr>
+                <td>onmessage</td>
+                <td>Коли отримано повідомлення</td>
+            </tr>
+            <tr>
+                <td>onerror</td>
+                <td>Коли виникла помилка</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_webworkers.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html_examples.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr class="hr-bottom">
+        <img src="../svg/warning_black.svg" alt="warning" width="30" class="img-left"><p class="note-warning"><b>Не викладайте</b> свій код безпосередньо в коментарях, він відображається некоректно. Скористайтесь такими сервісами, як <a href="https://jsfiddle.net/" target="_blank" rel="nofollow">jsfiddle.net</a>, <a href="https://codepen.io/pen/tour/welcome/start" target="_blank" rel="nofollow">codepen.io</a>, <a href="https://liveweave.com/" target="_blank" rel="nofollow">liveweave.com</a>, <a href="https://jsbin.com/?html,css,output" target="_blank" rel="nofollow">jsbin.com</a>, збережіть код на будь-якому з цих сервісів і в коментарях дайте на нього посилання. Так буде видно і код, і результат.</p>
+        <!-- Коментарі від Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = websunsay.github.io;  // канонічний URL сторінки
+                this.page.identifier = websunsay.github.io/html/html5_serversentevents.html // унікальний ідентифікатор сторінки
+            };
+            (function() { // Не редагувати нижче цієї лінії
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-websunsay-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Будь ласка, увімкніть JavaScript для перегляду <a href="https://disqus.com/?ref_noscript">коментарів на основі Disqus.</a></noscript>
+        <!-- / Коментарі від Disqus -->
+    </div>
+    <!-- / CONTENT -->
+    <div class="right-sidebar">
+        <iframe src="../pages/source.html" class="frame-right-sidebar"></iframe>
+    </div>
+</main>
+<footer>
+    <iframe src="../pages/footer.html" class="frame-footer"></iframe>
+</footer>
+</body>
+</html>

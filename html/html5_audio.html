@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>HTML5. Audio / Аудіо. W3schools українською. Уроки для початківців</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML,CSS,уроки,для початківців,html5,мультимедіа,на сайті,елементи,теги,аудіо,audio,w3schools,українською" />
+    <meta name="description" content="Урок 48. HTML5. Аудіо на сайті. Як додати аудіоплеєр на веб-сторінку? W3Schools українською. Підручник для початківців" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ws.css" />
+    <link rel="stylesheet" href="../styles/handheld.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/browserref.css">
+    <link rel="canonical" href="https://websunsay.github.io/" />
+    <meta property="og:title" content="HTML5. Audio / Аудіо. W3schools українською. Уроки для початківців" />
+    <meta property="og:type" content="веб-сайт" /> <!--описывает тип объекта на странице-->
+    <meta property="og:url" content="https://websunsay.github.io/" /><!--адрес сайта-->
+    <meta property="og:image" content="../image/html5_64x64.png" /><!--адрес картинки-->
+    <meta property="og:description" content="Урок 48. HTML5. Аудіо на сайті. Як додати аудіоплеєр на веб-сторінку? W3Schools українською. Підручник для початківців" />
+    <meta property="og:locale" content="uk" /> <!--мова сайту-->
+    <meta property="og:site_name" content="WebSunSay - W3Schools українською - Основи HTML, CSS, JavaScript, PHP для початківців" />
+    <script src="../js/topnav.js"></script>
+</head>
+<body>
+<iframe src="../pages/header.html" class="frame-header"></iframe>
+<main>
+    <div class="left-sidebar">
+        <iframe src="../pages/basichtml.html" class="frame-left-sidebar"></iframe>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>HTML5. Аудіо</h1>
+        <p class="brief"><strong>Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців</strong></p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_video.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html_object.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr>
+        <h2>Аудіо в Інтернеті</h2>
+        <p>До появи <strong>HTML5</strong> аудіофайли можна було відтворювати лише у веб-браузері за допомогою плагіна (на зразок flash).</p>
+        <p><strong>HTML5</strong> елемент <code class="w3-codespan">&lt;audio&gt;</code> вказує стандартний спосіб вбудовування аудіо в веб-сторінку.</p>
+        <hr>
+        <h2>Підтримка браузерами</h2>
+        <p>Цифри в таблиці визначають першу версію браузера, яка повністю підтримує елемент <code class="w3-codespan">&lt;audio&gt;</code>.</p>
+        <table class="browserref notranslate">
+            <tbody><tr>
+                <th style="width:20%;font-size:16px;text-align:left;">Елемент</th>
+                <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+                <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:16%;" class="bsSafari" title="Safari"></th>
+                <th style="width:16%;" class="bsOpera" title="Opera"></th>
+            </tr>
+            <tr>
+                <td style="text-align:left;">&lt;audio&gt;</td>
+                <td>4.0</td>
+                <td>9.0</td>
+                <td>3.5</td>
+                <td>4.0</td>
+                <td>10.5</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>HTML елемент &lt;audio&gt;</h2>
+        <p>Щоб відтворити аудіофайл у HTML, використовуйте елемент <code class="w3-codespan">&lt;audio&gt;</code>:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>audio<span class="attributecolor" style="color:red"> controls</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>source<span class="attributecolor" style="color:red"> src<span class="attributevaluecolor" style="color:mediumblue">="horse.ogg"</span> type<span class="attributevaluecolor" style="color:mediumblue">="audio/ogg"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>source<span class="attributecolor" style="color:red"> src<span class="attributevaluecolor" style="color:mediumblue">="horse.mp3"</span> type<span class="attributevaluecolor" style="color:mediumblue">="audio/mpeg"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                Ваш веб-браузер не підтримує елемент audio.<br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/audio<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_audio_all" target="_blank" rel="nofollow">Спробуйте самі »</a>
+        </div>
+        <h3>Результат:</h3>
+        <audio controls>
+            <source src="../media/horse.ogg" type="audio/ogg">
+            <source src="../media/horse.mp3" type="audio/mpeg">
+            Ваш веб-браузер не підтримує елемент audio.
+        </audio>
+        <hr><h2>HTML Аудіо - Як це працює</h2>
+        <p>Атрибут <code class="w3-codespan">controls</code> додає елементи керування звуком, такі як відтворення, пауза та гучність.</p>
+        <p>Елемент <code class="w3-codespan">&lt;source&gt;</code> дозволяє вказати альтернативні аудіофайли, з яких браузер може вибирати. Браузер використовуватиме перший розпізнаний формат.</p>
+        <p>Текст між <code class="w3-codespan">&lt;audio&gt;</code> і <code class="w3-codespan">&lt;/audio&gt;</code> тегами відображатиметься лише в браузерах, які не підтримують елемент <code class="w3-codespan">&lt;audio&gt;</code>.</p>
+        <hr>
+        <h2>HTML Аудіо - Підтримка браузерами</h2>
+        <p>В HTML5 є три підтримуваних аудіоформату: MP3, WAV і OGG.</p>
+        <p>Підтримка браузерами різних форматів:</p>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Браузер</th>
+                <th style="width:25%">MP3</th>
+                <th style="width:25%">WAV</th>
+                <th style="width:25%">OGG</th>
+            </tr>
+            <tr>
+                <td>Internet Explorer</td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:red;">NO</span></td>
+                <td><span style="color:red;">NO</span></td>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:blue;">YES</span></td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:blue;">YES</span></td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:red;">NO</span></td>
+            </tr>
+            <tr>
+                <td>Opera</td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:blue;">YES</span></td>
+                <td><span style="color:blue;">YES</span></td>
+            </tr>
+            </tbody></table>
+        <hr><h2>HTML Аудіо - Типи медіа</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:50%">Формат файлу</th>
+                <th style="width:50%">Тип медіа</th>
+            </tr>
+            <tr>
+                <td>MP3</td>
+                <td>audio/mpeg</td>
+            </tr>
+            <tr>
+                <td>OGG</td>
+                <td>audio/ogg</td>
+            </tr>
+            <tr>
+                <td>WAV</td>
+                <td>audio/wav</td>
+            </tr>
+            </tbody></table>
+        <hr>
+        <h2>HTML Аудіо - Методи, властивості та події</h2>
+        <p>HTML5 визначає методи, властивості та події DOM для елементу <code class="w3-codespan">&lt;audio&gt;</code>.</p>
+        <p>Це дозволяє завантажувати, відтворювати та призупиняти аудіо, а також встановлювати тривалість та гучність.</p>
+        <p>Є також події DOM, які можуть сповіщати вас, коли звук починає відтворюватися, призупиняється і т.д..</p>
+        <p>Для повної довідки на DOM перейдіть до <a href="../tags/ref_av_dom.html">HTML5 Аудіо/Відео DOM Довідника</a>.</p>
+        <hr><h2>HTML5 Аудіо теги</h2>
+
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:150px">Тег</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="../tags/tag_audio.html">&lt;audio&gt;</a></td>
+                <td>Визначає звуковий контент</td>
+            </tr>
+            <tr>
+                <td><a href="../tags/tag_source.html">&lt;source&gt;</a></td>
+                <td>Визначає безліч мультимедійних ресурсів для елементів медіа, наприклад &lt;video&gt; та &lt;audio&gt;</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_video.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html_object.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr class="hr-bottom">
+        <img src="../svg/warning_black.svg" alt="warning" width="30" class="img-left"><p class="note-warning"><b>Не викладайте</b> свій код безпосередньо в коментарях, він відображається некоректно. Скористайтесь такими сервісами, як <a href="https://jsfiddle.net/" target="_blank" rel="nofollow">jsfiddle.net</a>, <a href="https://codepen.io/pen/tour/welcome/start" target="_blank" rel="nofollow">codepen.io</a>, <a href="https://liveweave.com/" target="_blank" rel="nofollow">liveweave.com</a>, <a href="https://jsbin.com/?html,css,output" target="_blank" rel="nofollow">jsbin.com</a>, збережіть код на будь-якому з цих сервісів і в коментарях дайте на нього посилання. Так буде видно і код, і результат.</p>
+        <!-- Коментарі від Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = websunsay.github.io;  // канонічний URL сторінки
+                this.page.identifier = websunsay.github.io/html/html5_audio.html; // унікальний ідентифікатор сторінки
+            };
+            (function() { // Не редагувати нижче цієї лінії
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-websunsay-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Будь ласка, увімкніть JavaScript для перегляду <a href="https://disqus.com/?ref_noscript">коментарів на основі Disqus.</a></noscript>
+        <!-- / Коментарі від Disqus -->
+    </div>
+    <!-- / CONTENT -->
+    <div class="right-sidebar">
+        <iframe src="../pages/source.html" class="frame-right-sidebar"></iframe>
+    </div>
+</main>
+<footer>
+    <iframe src="../pages/footer.html" class="frame-footer"></iframe>
+</footer>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>HTML5. Урок №43. Гід по стилю. Синтаксис HTML. W3schools українською. Уроки для початківців</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML,CSS,уроки,для початківців,html5,html4,гід,стилі,елементи,теги,стиль,синтаксис,підручник,w3schools,українською" />
+    <meta name="description" content="Урок 43. HTML5. Гід по стилю. Як використовувати стилі? Правильний синтаксис згідно специфікації. W3Schools українською. Підручник для початківців" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ws.css" />
+    <link rel="stylesheet" href="../styles/handheld.css" />
+    <link rel="canonical" href="https://websunsay.github.io/" />
+    <meta property="og:title" content="HTML5. Урок №43. Гід по стилю. Синтаксис HTML. W3schools українською. Уроки для початківців" />
+    <meta property="og:type" content="веб-сайт" /> <!--описывает тип объекта на странице-->
+    <meta property="og:url" content="https://websunsay.github.io/" /><!--адрес сайта-->
+    <meta property="og:image" content="../image/html5_64x64.png" /><!--адрес картинки-->
+    <meta property="og:description" content="Урок 43. HTML5. Гід по стилю. Як використовувати стилі? Правильний синтаксис згідно специфікації. W3Schools українською. Підручник для початківців" />
+    <meta property="og:locale" content="uk" /> <!--мова сайту-->
+    <meta property="og:site_name" content="WebSunSay - W3Schools українською - Основи HTML, CSS, JavaScript, PHP для початківців" />
+    <script src="../js/topnav.js"></script>
+</head>
+<body>
+<iframe src="../pages/header.html" class="frame-header"></iframe>
+<main>
+    <div class="left-sidebar">
+        <iframe src="../pages/basichtml.html" class="frame-left-sidebar"></iframe>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>HTML5. Гід по стилю і угоди по кодуванню</h1>
+        <p class="brief"><strong>Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців</strong></p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_migration.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html5_canvas.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr>
+        <h2>HTML. Як правильно писати код? Угоди по кодуванню</h2>
+        <p>Веб-розробники часто не впевнені у використанні стилю кодування та синтаксису в <strong>HTML</strong>.</p>
+        <p>Між 2000 і 2010 роками багато веб-розробників перейшли з <strong>HTML</strong> на <strong>XHTML</strong>.</p>
+        <p>Починаючи з <strong>XHTML</strong> розробники були змушені писати валідний і "добре сформований" код.</p>
+        <p><strong>HTML5</strong> є трохи більш недбалим, коли йдеться про перевірку коду.</p>
+        <hr>
+        <h2>Будьте розумні і майбутнє це доведе</h2>
+        <p>Послідовне використання стилю полегшує іншим розуміння вашого <strong>HTML</strong>.</p>
+        <p>У майбутньому програми, такі як читачі XML, можуть захотіти прочитати ваш <strong>HTML</strong>.</p>
+        <p>Використання добре сформованого синтаксису "близько до XHTML" є розумним вибором.</p>
+        <div class="w3-panel w3-note">
+            <p>Завжди тримайте свій код акуратним, чистим і добре сформованим.</p>
+        </div>
+        <hr>
+        <h2>Використовуйте правильний Doctype</h2>
+        <p>Завжди оголошуйте Doctype (тип документу) в першому рядку документу:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!DOCTYPE<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <p>Якщо вам потрібна узгодженість з тегами нижнього регістру, ви можете використовувати:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!doctype<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Використовуйте назви в нижньому регістрі</h2>
+        <p><strong>HTML5</strong> дозволяє змішувати великі та малі літери в назвах елементів.</p>
+        <p>Ми рекомендуємо використовувати назви елементів літерами лише в нижньому регістрі, оскільки:</p>
+        <ul>
+            <li>Змішування імен верхнього та нижнього регістрів є поганим для сприйняття</li>
+            <li>Розробники зазвичай використовують назви за допомогою літер в нижньому регістрі (як в XHTML)</li>
+            <li>Нижній регістр виглядає чистіше</li>
+            <li>Літери в нижньому регістрі легше і швидше писати</li>
+        </ul>
+        <div class="w3-example">
+            <h3>Погано:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>SECTION<span class="tagcolor" style="color:mediumblue">&gt;</span></span> <br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/SECTION<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Дуже погано:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>Section<span class="tagcolor" style="color:mediumblue">&gt;</span></span> <br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/SECTION<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Добре:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>section<span class="tagcolor" style="color:mediumblue">&gt;</span></span> <br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/section<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Закривайте всі HTML елементи</h2>
+        <p>У HTML5 не потрібно закривати всі елементи (наприклад, елемент <code class="w3-codespan">&lt;p&gt;</code>). </p>
+        <p>W3C рекомендує закривати всі HTML елементи.</p>
+        <div class="w3-example">
+            <h3>Погано:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>section<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/section<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Добре:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>section<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/section<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Закривайте порожні HTML елементи</h2>
+        <p>В HTML5 не обов'язково закривати порожні елементи.</p>
+        <div class="w3-example">
+            <h3>Дозволено:</h3>
+            <div class="w3-code notranslate htmlHigh">
+ <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>meta<span class="attributecolor" style="color:red">
+    charset<span class="attributevaluecolor" style="color:mediumblue">="utf-8"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Також дозволено:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>meta<span class="attributecolor" style="color:red"> charset<span class="attributevaluecolor" style="color:mediumblue">="utf-8"</span> /</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <p>Проте закриваюча коса риса (/) НЕОБХІДНА в XHTML і XML.</p>
+        <p>Якщо ви очікуєте, що програмне забезпечення XML матиме доступ до вашої сторінки, то варто зберегти закриту косу риску (слеш)!</p>
+        <hr>
+        <h2>Використовуйте назви атрибутів в нижньому регістрі</h2>
+        <p>HTML5 дозволяє змішувати великі та малі літери в назвах атрибутів.</p>
+        <p>W3C рекомендує використовувати назви атрибутів в нижньому регістрі, оскільки:</p>
+        <ul>
+            <li>Змішування літер верхнього та нижнього регістрів в назвах є поганим для сприйняття</li>
+            <li>Розробники зазвичай використовують назви в малому регістрі (як в XHTML)</li>
+            <li>Нижній регістр виглядає чистіше</li>
+            <li>Літери в нижньому регістрі легше і швидше писати</li>
+        </ul>
+        <div class="w3-example">
+            <h3>Погано:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>div<span class="attributecolor" style="color:red"> CLASS<span class="attributevaluecolor" style="color:mediumblue">="menu"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Добре:</h3>
+            <div class="w3-code notranslate htmlHigh">
+ <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>div<span class="attributecolor" style="color:red">
+    class<span class="attributevaluecolor" style="color:mediumblue">="menu"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Значення атрибутів в лапках</h2>
+        <p>HTML5 дозволяє писати значення атрибутів без лапок.</p>
+        <p>W3C рекомендує писати значення атрибутів в лапках, оскільки:</p>
+        <ul>
+            <li>Розробники зазвичай пишуть значення атрибутів в лапках (як в XHTML)</li>
+            <li>Значення в лапках легше читати</li>
+            <li>Якщо значення містить пробіли, ви ПОВИННІ використовувати лапки</li>
+        </ul>
+        <div class="w3-example">
+            <h3>Дуже погано:</h3>
+            <p>Це не працюватиме, оскільки значення містить пробіли:</p>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>table<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">=table </span>striped</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Погано:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>table<span class="attributecolor" style="color:red"> class<span class="attributevaluecolor" style="color:mediumblue">=striped</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Добре:</h3>
+            <div class="w3-code notranslate htmlHigh">
+ <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>table<span class="attributecolor" style="color:red">
+    class<span class="attributevaluecolor" style="color:mediumblue">="striped"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Атрибути зображення</h2>
+        <p>Завжди додавайте атрибут <code class="w3-codespan">alt</code> до зображень. Цей атрибут є важливим, коли зображення з якоїсь причини не може бути відображено. Також завжди визначайте ширину та висоту зображення. Це зменшує мерехтіння, оскільки браузер може резервувати простір для зображення перед завантаженням.</p>
+        <div class="w3-example">
+            <h3>Погано:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+ <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>img<span class="attributecolor" style="color:red">
+    src<span class="attributevaluecolor" style="color:mediumblue">="html5.gif"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Добре:</h3>
+            <div class="w3-code notranslate htmlHigh">
+ <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>img<span class="attributecolor" style="color:red">
+    src<span class="attributevaluecolor" style="color:mediumblue">="html5.gif"</span> alt<span class="attributevaluecolor" style="color:mediumblue">="HTML5"</span> style<span class="attributevaluecolor" style="color:mediumblue">="width:128px;height:128px"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Пробіли та знаки рівності</h2>
+        <p>HTML5 дозволяє розміщувати пробіли навколо знаків рівності. Але простіше читати, коли об'єкти згруповані разом.</p>
+        <div class="w3-example">
+            <h3>Погано:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+ <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>link<span class="attributecolor" style="color:red">
+    rel <span class="attributevaluecolor" style="color:mediumblue">= "stylesheet"</span> href <span class="attributevaluecolor" style="color:mediumblue">= "styles.css"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Добре:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>link<span class="attributecolor" style="color:red"> rel<span class="attributevaluecolor" style="color:mediumblue">="stylesheet"</span> href<span class="attributevaluecolor" style="color:mediumblue">="styles.css"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Уникайте довгих рядків коду</h2>
+        <p>Використовуючи редактор HTML, незручно прокручувати праворуч і ліворуч, щоб читати HTML-код.</p>
+        <p>Намагайтесь уникати рядків коду довжиною більше 80 символів.</p>
+        <hr>
+        <h2>Пусті рядки та відступ</h2>
+        <p>Не додавайте порожні рядки без крайньої необхідності.</p>
+        <p>Для зручності читання додавайте порожні рядки для розділення великих або логічних блоків коду.</p>
+        <p>Для зручності читання додайте два пробіли відступу. Не використовуйте клавішу табуляції.</p>
+        <p>Не використовуйте непотрібні порожні рядки та відступи. Немає потреби робити відступи для кожного елемента:</p>
+        <div class="w3-example">
+            <h3>Непотрібно:</h3>
+            <div class="w3-code notranslate htmlHigh" style="border-color:orange;">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Famous Cities<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h2<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Tokyo<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h2<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp;&nbsp;&nbsp; Tokyo is the capital of Japan, the center of the Greater Tokyo Area,<br>&nbsp;&nbsp;&nbsp; and the most populous metropolitan area in the world.<br>&nbsp;&nbsp;&nbsp; It is the seat of the Japanese government and the Imperial Palace,<br>&nbsp;&nbsp;&nbsp; and the home of the Japanese Imperial Family.<br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/body<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Краще:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Famous Cities<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h2<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Tokyo<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h2<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Tokyo is the capital of Japan, the
+                center of the Greater Tokyo Area,<br>and the most
+                populous metropolitan area in the world.<br>It is the
+                seat of the Japanese government and the Imperial Palace,<br>
+                and the home of the Japanese Imperial Family.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/body<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Приклад таблиці:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>table<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>tr<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp;&nbsp;&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>th<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Name<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/th<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp;&nbsp;&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>th<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Description<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/th<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp;
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/tr<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>tr<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp;&nbsp;&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>td<span class="tagcolor" style="color:mediumblue">&gt;</span></span>A<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/td<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp;&nbsp;&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>td<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Description of A<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/td<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp;
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/tr<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>tr<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp;&nbsp;&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>td<span class="tagcolor" style="color:mediumblue">&gt;</span></span>B<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/td<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp;&nbsp;&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>td<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Description of B<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/td<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/tr<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/table<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <div class="w3-example">
+            <h3>Приклад списку:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>ul<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>li<span class="tagcolor" style="color:mediumblue">&gt;</span></span>London<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/li<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>li<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Paris<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/li<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                &nbsp;
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>li<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Tokyo<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/li<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/ul<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Опускання &lt;html&gt; та &lt;body&gt;?</h2>
+        <p>В HTML5 тег <code class="w3-codespan">&lt;html&gt;</code> і тег <code class="w3-codespan">&lt;body&gt;</code> можуть бути опущені.</p>
+        <p>Наступний код буде вважатися валідним згідно специфікації HTML5:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!DOCTYPE<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>head<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>title<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Page Title<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/title<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/head<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a heading<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_syntax_nobody" target="_blank" rel="nofollow">Спробуйте самі »</a>
+        </div>
+        <p><strong>Однак ми не рекомендуємо пропускати теги <code class="w3-codespan">&lt;html&gt;</code> та <code class="w3-codespan">&lt;body&gt;</code>.</strong></p>
+        <p>Елемент <code class="w3-codespan">&lt;html&gt;</code> вказує завантаження HTML-документу. Також це рекомендоване місце для визначення мови сторінки:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!DOCTYPE<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>html<span class="attributecolor" style="color:red"> lang<span class="attributevaluecolor" style="color:mediumblue">="en-US"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <p>Оголошення мови сторінки має важливе значення для програм з доступністю (програми для читання з екрану) та пошукових систем.</p>
+        <p>Опущення <code class="w3-codespan">&lt;html&gt;</code> або <code class="w3-codespan">&lt;body&gt;</code> може обрушити DOM та програмне забезпечення XML.</p>
+        <p>Опущення <code class="w3-codespan">&lt;body&gt;</code> може викликати помилки в старих браузерах (IE9).</p>
+        <hr>
+        <h2>Опускання &lt;head&gt;?</h2>
+        <p>В HTML5 тег <code class="w3-codespan">&lt;head&gt;</code> також може бути опущеним.</p>
+        <p>За замовчуванням браузери додаватимуть усі елементи, які знаходяться перед <code class="w3-codespan">&lt;body&gt;</code> до <code class="w3-codespan">&lt;head&gt;</code> елементу.</p>
+        <p>Ви можете зменшити складність HTML, пропустивши тег <code class="w3-codespan">&lt;head&gt;</code>:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!DOCTYPE<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>html<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>title<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Page Title<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/title<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a heading<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>This is a paragraph.<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/html<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_syntax_nohead" target="_blank" rel="nofollow">Спробуйте самі »</a>
+        </div>
+        <p><strong>Однак ми не рекомендуємо пропускати тег <code class="w3-codespan">&lt;head&gt;</code>.</strong></p>
+        <div class="w3-panel w3-note">
+            <p>Опущення тегів є невідомим для веб-розробників. Потрібен час, щоб це стало в якості орієнтира.</p>
+        </div>
+        <hr>
+        <h2>Метадані</h2>
+        <p><strong>Елемент <code class="w3-codespan">&lt;title&gt;</code> обов'язковий в HTML5</strong>. Необхідно робити назву якомога змістовнішою:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>title<span class="tagcolor" style="color:mediumblue">&gt;</span></span>HTML5 Syntax and Coding Style<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/title<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <p>Для забезпечення належної інтерпретації та правильного індексування пошуковими системами, як мова сторінки, так і кодування символів повинні бути визначені якомога раніше в документі:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!DOCTYPE<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>html<span class="attributecolor" style="color:red">
+    lang<span class="attributevaluecolor" style="color:mediumblue">="en-US"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>head<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>meta<span class="attributecolor" style="color:red"> charset<span class="attributevaluecolor" style="color:mediumblue">="UTF-8"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>&nbsp; <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>title<span class="tagcolor" style="color:mediumblue">&gt;</span></span>HTML5
+                Syntax and Coding Style<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/title<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/head<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+        </div>
+        <hr>
+        <h2>Налаштування вікна перегляду - Viewport</h2>
+        <p>В HTML5 з'явився метод, який дозволив веб-дизайнерам взяти під свій контроль вікно перегляду за допомогою тегу  <code class="w3-codespan">&lt;meta&gt;</code>.</p>
+        <p>Вікно перегляду (viewport) - видима область користувача веб-сторінки. Вона змінюється в залежності від пристрою і буде менше на мобільному телефоні, ніж на екрані комп'ютера.</p>
+        <p>Вам слід включити наступний елемент <code class="w3-codespan">&lt;meta&gt;</code> на ваших веб-сторінках:</p>
+        <div class="w3-code w3-border notranslate htmlHigh">
+            <div>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>meta<span class="attributecolor" style="color:red"> name<span class="attributevaluecolor" style="color:mediumblue">="viewport"</span> content<span class="attributevaluecolor" style="color:mediumblue">="width=device-width, initial-scale=1.0"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        </div>
+        <p>Елемент <code class="w3-codespan">&lt;meta&gt;</code> viewport надає інструкції браузеру, як контролювати розміри та масштабування сторінки.</p>
+        <p>Частина width=device-width встановлює ширину сторінки, щоб вона відповідала ширині екрана пристрою (яка залежить від пристрою).</p>
+        <p>Частина initial-scale=1.0 встановлює початковий рівень масштабування, коли сторінка спочатку завантажується браузером.</p>
+        <p>Ось приклад веб-сторінки <em>без</em> viewport метатега, і тієї ж веб-сторінки <em>із</em> viewport метатегом:</p>
+        <div class="w3-note w3-panel">
+            <p><strong>Порада:</strong> Якщо ви переглядаєте цю сторінку за допомогою телефону або планшету, можна натиснути два посилання нижче, щоб побачити різницю.</p>
+        </div>
+        <br>
+        <div class="w3-row" style="text-align:center;">
+            <div class="w3-half">
+                <a target="_blank" href="example_withoutviewport.html"><img src="../images/img_viewport1.png" class="w3-hover-shadow viewport" alt="Сторінка без viewport метатегу"><br><br><b>Без viewport метатегу</b></a>
+                <br>
+                <br>
+            </div>
+            <div class="w3-half">
+                <a target="_blank" href="example_withviewport.html"><img src="../images/img_viewport2.png" class="w3-hover-shadow viewport" alt="Сторінка із viewport метатегом"><br><br><b>Із viewport метатегом</b></a>
+                <br>
+                <br>
+            </div>
+        </div>
+        <hr>
+        <h2>HTML Коментарі</h2>
+        <p>Короткі коментарі повинні бути написані на одному рядку:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="commentcolor" style="color:green">&lt;!-- Це коментар --&gt;</span>
+            </div>
+        </div>
+        <p>Коментарі, які охоплюють більше одного рядка, повинні бути написані так:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+<span class="commentcolor" style="color:green">&lt;!-- <br>&nbsp; Це довгий приклад коментарів. Це довгий приклад коментарів.<br>&nbsp; Це довгий приклад коментарів. Це довгий приклад коментарів.<br>--&gt;</span>
+            </div>
+        </div>
+        <p>Довгі коментарі легше побачити, якщо вони мають відступ у два пробіли.</p>
+        <hr>
+        <h2>Таблиця стилів</h2>
+        <p>Використовуйте простий синтаксис для посилання на таблиці стилів (атрибут type не є необхідним):</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>link<span class="attributecolor" style="color:red"> rel<span class="attributevaluecolor" style="color:mediumblue">="stylesheet"</span> href<span class="attributevaluecolor" style="color:mediumblue">="styles.css"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        </div>
+        <p>Короткі правила стилю можуть бути написані стисло, як це:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate cssHigh"><span class="cssselectorcolor" style="color:brown">
+p.intro <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red">font-family<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> Verdana<span class="cssdelimitercolor" style="color:black">;</span></span> font-size<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 16em<span class="cssdelimitercolor" style="color:black">;</span></span></span><span class="cssdelimitercolor" style="color:black">}</span> </span></div>
+        </div>
+        <p>Довгі правила стилю повинні бути написані на декількох лініях:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate cssHigh"><span class="cssselectorcolor" style="color:brown">
+body <span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red"><br>&nbsp; background-color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> lightgrey<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp; font-family<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> "Arial
+Black", Helvetica, sans-serif<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp; font-size<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 16em<span class="cssdelimitercolor" style="color:black">;</span></span><br>&nbsp; color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span>
+black<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span> </span></div>
+        </div>
+        <ul>
+            <li>Розмістіть відкриваючу дужку на тій же лінії, що й селектор</li>
+            <li>Використовуйте один пробіл перед відкриваючою дужкою</li>
+            <li>Використовуйте два пробіли відступу</li>
+            <li>Використовуйте крапку з комою після кожної пари властивості-значення, включаючи останню</li>
+            <li>Використовуйте лише лапки навколо значень, якщо значення містить пробіли</li>
+            <li>Помістіть закриваючу дужку на нову лінію, без провідних пробілів</li>
+            <li>Уникайте рядків понад 80 символів</li>
+        </ul>
+        <hr>
+        <h2>Підключення JavaScript в HTML</h2>
+        <p>Використовуйте простий синтаксис для підключення зовнішніх скриптів (атрибут type не потрібний):</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>script<span class="attributecolor" style="color:red"> src<span class="attributevaluecolor" style="color:mediumblue">="myscript.js"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        </div>
+        <hr>
+        <h2>Доступ до елементів HTML за допомогою JavaScript</h2>
+        <p>Наслідком використання "неохайних" стилів HTML може стати помилка JavaScript.</p>
+        <p>Ці два оператора JavaScript дадуть різні результати:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate jsHigh"><span class="jscolor" style="color:black"><span class="jsnumbercolor" style="color:red">
+</span> <span class="jskeywordcolor" style="color:mediumblue">var</span> obj =<span class="jsnumbercolor" style="color:red">
+</span> getElementById(<span class="jsstringcolor" style="color:brown">"Demo"</span>)<br><br><span class="jskeywordcolor" style="color:mediumblue">var</span> obj = getElementById(<span class="jsstringcolor" style="color:brown">"demo"</span>)<span class="jsnumbercolor" style="color:red">
+</span> </span></div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_syntax_javascript" target="_blank" rel="nofollow">Спробуйте самі »</a>
+        </div>
+        <p>Відвідайте <a href="../js/js_conventions.html">Посібник по стилю JavaScript</a>.</p>
+        <hr>
+        <h2>Використовуйте імена файлів в нижньому регістрі</h2>
+        <p>Деякі веб-сервери (Apache, Unix) чутливі до регістру імен файлів: "london.jpg" не доступний як "London.jpg".</p>
+        <p>Інші веб-сервери (Microsoft, IIS) не чутливі до регістру: "london.jpg" доступний як "London.jpg", так і як "london.jpg".</p>
+        <p>Якщо ви використовуєте суміш верхнього та нижнього регістру, ви повинні бути надзвичайно послідовними.</p>
+        <p>Якщо ви перейдете з нечутливого до регістру сервера на чутливий до регістру сервер, то навіть невеличкі помилки поламають вашу мережу!</p>
+        <p>Щоб уникнути цих проблем, завжди використовуйте імена файлів у нижньому регістрі.</p>
+        <hr>
+        <h2>Розширення файлів</h2>
+        <p>HTML файли повинні мати розширення <strong>.html</strong> або <strong>.htm</strong>.</p>
+        <p>CSS файли повинні мати розширення <strong>.css</strong>.</p>
+        <p>JavaScript файли повинні мати розширення <strong>.js</strong>.</p>
+        <hr>
+        <h2>Різниця між .htm та .html</h2>
+        <p>Немає різниці між розширеннями .htm та .html. Обидва розширення веб-браузерами або веб-серверами будуть розглядатися як HTML.</p>
+        <p>Відмінності культурні:</p>
+        <p>.htm "відчувають" ранні системи DOS, де система обмежувала розширення до 3 символів.</p>
+        <p>.html "відчувають" операційні системи Unix, які не мають цього обмеження.</p>
+        <hr>
+        <h2>Технічні відмінності</h2>
+        <p>Якщо URL-адреса не вказує ім'я файлу (наприклад, <a href="https://www.w3schools.com/css/" target="_blank" rel="nofollow">https://www.w3schools.com/css/</a>), сервер повертає ім'я файлу за замовчуванням. Загальні назви файлів за замовчуванням - index.html, index.htm, default.html і default.htm.</p>
+        <p>Якщо ваш сервер налаштовано лише з "index.html" як типове ім'я файлу, ваш файл має бути названий "index.html", а не "index.htm".</p>
+        <p>Проте, сервери можуть бути налаштовані на більш ніж одне ім'я файлу за замовчуванням, і зазвичай ви можете встановити стільки назв файлів за умовчанням, скільки потрібно.</p>
+        <p>Так чи інакше, повне розширення для HTML-файлів .html, і немає ніяких причин його не використовувати.</p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_migration.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html5_canvas.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr class="hr-bottom">
+        <img src="../svg/warning_black.svg" alt="warning" width="30" class="img-left"><p class="note-warning"><b>Не викладайте</b> свій код безпосередньо в коментарях, він відображається некоректно. Скористайтесь такими сервісами, як <a href="https://jsfiddle.net/" target="_blank" rel="nofollow">jsfiddle.net</a>, <a href="https://codepen.io/pen/tour/welcome/start" target="_blank" rel="nofollow">codepen.io</a>, <a href="https://liveweave.com/" target="_blank" rel="nofollow">liveweave.com</a>, <a href="https://jsbin.com/?html,css,output" target="_blank" rel="nofollow">jsbin.com</a>, збережіть код на будь-якому з цих сервісів і в коментарях дайте на нього посилання. Так буде видно і код, і результат.</p>
+        <!-- Коментарі від Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = websunsay.github.io;  // канонічний URL сторінки
+                this.page.identifier = websunsay.github.io/html/html5_syntax.html; // унікальний ідентифікатор сторінки
+            };
+            (function() { // Не редагувати нижче цієї лінії
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-websunsay-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Будь ласка, увімкніть JavaScript для перегляду <a href="https://disqus.com/?ref_noscript">коментарів на основі Disqus.</a></noscript>
+        <!-- / Коментарі від Disqus -->
+    </div>
+    <!-- / CONTENT -->
+    <div class="right-sidebar">
+        <iframe src="../pages/source.html" class="frame-right-sidebar"></iframe>
+    </div>
+</main>
+<footer>
+    <iframe src="../pages/footer.html" class="frame-footer"></iframe>
+</footer>
+</body>
+</html>

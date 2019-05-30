@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>HTML5. Web Workers. Веб-працівники. W3schools українською. Уроки для початківців</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML,CSS,уроки,для початківців,html5,web workers,веб,працівники,робітники,елемент,теги,w3schools,українською,мовою" />
+    <meta name="description" content="Урок 54. HTML5. Web Workers. Веб-працівники. Що таке web-workers? Для чого потрібні веб-працівники? W3Schools українською. Підручник для початківців" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ws.css" />
+    <link rel="stylesheet" href="../styles/handheld.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/browserref.css">
+    <link rel="canonical" href="https://websunsay.github.io/" />
+    <meta property="og:title" content="HTML5. Web Workers. Веб-працівники. W3schools українською. Уроки для початківців" />
+    <meta property="og:type" content="веб-сайт" /> <!--описывает тип объекта на странице-->
+    <meta property="og:url" content="https://websunsay.github.io/" /><!--адрес сайта-->
+    <meta property="og:image" content="../image/html5_64x64.png" /><!--адрес картинки-->
+    <meta property="og:description" content="Урок 54. HTML5. Web Workers. Веб-працівники. Що таке web-workers? Для чого потрібні веб-працівники? W3Schools українською. Підручник для початківців" />
+    <meta property="og:locale" content="uk" /> <!--мова сайту-->
+    <meta property="og:site_name" content="WebSunSay - W3Schools українською - Основи HTML, CSS, JavaScript, PHP для початківців" />
+    <script src="../js/topnav.js"></script>
+</head>
+<body>
+<iframe src="../pages/header.html" class="frame-header"></iframe>
+<main>
+    <div class="left-sidebar">
+        <iframe src="../pages/basichtml.html" class="frame-left-sidebar"></iframe>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>HTML5. Web Workers - Веб-працівники</h1>
+        <p class="brief"><strong>Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців</strong></p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_webstorage.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html5_serversentevents.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr>
+        <p class="intro">Веб-працівник - це JavaScript, який працює у фоновому режимі, не впливаючи на продуктивність сторінки.</p>
+        <hr>
+        <h2>Що таке веб-працівник?</h2>
+        <p>Під час виконання скриптів на сторінці HTML сторінка перестає відповідати, поки сценарій не закінчиться.</p>
+        <p>Веб-працівник - це JavaScript, який працює у фоновому режимі, незалежно від інших скриптів, не впливаючи на продуктивність сторінки. Ви можете продовжувати робити все, що хочете: натискаючи, вибираючи речі і т.д., а веб-працівник працює у фоновому режимі.</p>
+        <hr>
+        <h2>Підтримка браузерами</h2>
+        <p>Цифри в таблиці визначають першу версію браузера, яка повністю підтримує Web Workers.</p>
+        <table class="browserref notranslate">
+            <tbody><tr>
+                <th style="width:20%;font-size:16px;text-align:left;">API</th>
+                <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+                <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:16%;" class="bsSafari" title="Safari"></th>
+                <th style="width:16%;" class="bsOpera" title="Opera"></th>
+            </tr>
+            <tr>
+                <td style="text-align:left;">Web Workers</td>
+                <td>4.0</td>
+                <td>10.0</td>
+                <td>3.5</td>
+                <td>4.0</td>
+                <td>11.5</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2>HTML Веб-працівник. Приклад</h2>
+        <p>Наведений нижче приклад створює простого веб-працівника, який підраховує числа у фоновому режимі:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-padding w3-white notranslate">
+                Count numbers: <output id="result"></output>
+                <p>
+                    <button onclick="startWorker()">Start Worker</button>
+                    <button onclick="stopWorker()">Stop Worker</button>
+                    <script>
+                        var w;
+                        function startWorker()
+                        {
+                            if(typeof(Worker)!=="undefined") {
+                                if(typeof(w)=="undefined") {
+                                    w=new Worker("demo_workers.js");
+                                }
+                                w.onmessage = function (event) {
+                                    document.getElementById("result").innerHTML=event.data;
+                                };
+                            } else {
+                                document.getElementById("result").innerHTML="Sorry, your browser does not support Web Workers...";
+                            }
+                        }
+                        function stopWorker()
+                        {
+                            w.terminate();
+                            w = undefined;
+                        }
+                    </script>
+                </p></div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webworker" class="w3-btn w3-margin-bottom w3-margin-top" rel="nofollow">Спробуйте самі »</a>
+        </div>
+        <hr>
+        <h2>Перевірте підтримку Веб-працівника</h2>
+        <p>Перш ніж створити веб-працівника, перевірте, чи підтримує його браузер користувача:</p>
+        <div class="w3-code w3-border notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">if</span> (<span class="jskeywordcolor" style="color:mediumblue">typeof</span>(Worker) !== <span class="jsstringcolor" style="color:brown">"undefined"</span>) {<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;<span class="commentcolor" style="color:green">// Так! Веб-працівник підтримується!<br></span><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp; <span class="commentcolor" style="color:green">// <i>Якийсь код.....</i><br></span><span class="jsnumbercolor" style="color:red">
+</span> }<span class="jsnumbercolor" style="color:red">
+</span> <span class="jskeywordcolor" style="color:mediumblue">else</span> {<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp; <span class="commentcolor" style="color:green">// Вибачте! Веб-працівник не підтримується.<br></span><span class="jsnumbercolor" style="color:red">
+</span> }
+</span></div>
+        <hr>
+        <h2>Створити файл Веб-працівника</h2>
+        <p>Тепер давайте створимо нашого веб-працівника в зовнішньому JavaScript файлі.</p>
+        <p>Тут ми створюємо скрипт, який рахує. Скрипт зберігається у файлі "demo_workers.js":</p>
+        <div class="w3-code w3-border notranslate jsHigh"><span class="jscolor" style="color:black"><span class="jsnumbercolor" style="color:red">
+</span>
+<span class="jskeywordcolor" style="color:mediumblue">var</span> i = <span class="jsnumbercolor" style="color:red">0</span>;<br><span class="jsnumbercolor" style="color:red">
+</span><br>
+<span class="jskeywordcolor" style="color:mediumblue">function</span> timedCount()<span class="jsnumbercolor" style="color:red">
+</span>{<br><span class="jsnumbercolor" style="color:red">
+</span>   &nbsp;
+i = i + <span class="jsnumbercolor" style="color:red">1</span>;<br><span class="jsnumbercolor" style="color:red">
+</span>   &nbsp;
+postMessage(i);<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;setTimeout(<span class="jsstringcolor" style="color:brown">"timedCount()"</span>,<span class="jsnumbercolor" style="color:red">500</span>);<br><span class="jsnumbercolor" style="color:red">
+</span>}<br><span class="jsnumbercolor" style="color:red">
+</span><br>
+timedCount();
+</span></div>
+        <p>Важливою частиною вищевказаного коду є метод <code class="w3-codespan">postMessage()</code>, який використовується для публікації повідомлення на HTML-сторінці.</p>
+        <p><b>Примітка:</b> Зазвичай веб-працівники не використовуються для таких простих скриптів, а використовуються для більш ресурсоємних задач.</p>
+        <hr>
+        <h2>Створити об'єкт Веб-працівника</h2>
+        <p>Тепер, коли у нас є файл веб-працівника, нам потрібно викликати його з HTML-сторінки.</p>
+        <p>Наступні рядки перевіряють, чи працівник вже існує, якщо ні - він створює новий веб-об'єкт і виконує код у "demo_workers.js":</p>
+        <div class="w3-code w3-border notranslate jsHigh"><span class="jscolor" style="color:black">
+<span class="jskeywordcolor" style="color:mediumblue">if</span> (<span class="jskeywordcolor" style="color:mediumblue">typeof</span>(w) == <span class="jsstringcolor" style="color:brown">"undefined"</span>) {<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp; w = <span class="jskeywordcolor" style="color:mediumblue">new</span> Worker(<span class="jsstringcolor" style="color:brown">"demo_workers.js"</span>);<br><span class="jsnumbercolor" style="color:red">
+</span> }</span></div>
+        <p>Потім ми можемо надсилати та отримувати повідомлення від веб-працівника.</p>
+        <p>Додайте до веб-працівника слухача подій "onmessage".</p>
+        <div class="w3-code w3-border notranslate jsHigh"><span class="jscolor" style="color:black">
+w.<span class="jspropertycolor" style="color:black">onmessage</span> = <span class="jskeywordcolor" style="color:mediumblue">function</span>(<span class="jskeywordcolor" style="color:mediumblue">event</span>){<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;document.<span class="jspropertycolor" style="color:black">getElementById</span>(<span class="jsstringcolor" style="color:brown">"result"</span>).<span class="jspropertycolor" style="color:black">innerHTML</span> = <span class="jskeywordcolor" style="color:mediumblue">event</span>.<span class="jspropertycolor" style="color:black">data</span>;<br><span class="jsnumbercolor" style="color:red">
+</span> };
+</span></div>
+        <p>Коли веб-працівник надсилає повідомлення, виконується код у слухачеві події. Дані веб-працівника зберігаються в event.data.</p>
+        <hr>
+        <h2>Завершити роботу Веб-працівника</h2>
+        <p>Коли об'єкт веб-працівника створено, він буде продовжувати прослуховувати повідомлення (навіть після завершення зовнішнього скрипту), доки він не буде завершений.</p>
+        <p>Для припинення роботи веб-працівника та вільних ресурсів браузера/комп'ютера використовуйте метод <code class="w3-codespan">terminate()</code>:</p>
+        <div class="w3-code w3-border notranslate"><div>
+            w.terminate();</div></div>
+        <hr>
+        <h2>Повторне використання Веб-працівника</h2>
+        <p>Якщо для робочої змінної задано значення undefined, після її завершення ви можете повторно використовувати код:</p>
+        <div class="w3-code w3-border notranslate"><div>
+            w = undefined;</div></div>
+        <hr>
+        <h2>Повний приклад коду Веб-працівника</h2>
+        <p>Ми вже бачили код Веб-працівника у файлі .js. Нижче наведено код для HTML-сторінки:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!DOCTYPE<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>html<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>p<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Count numbers: <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>output<span class="attributecolor" style="color:red"> id<span class="attributevaluecolor" style="color:mediumblue">="result"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/output<span class="tagcolor" style="color:mediumblue">&gt;</span></span><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/p<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>button<span class="attributecolor" style="color:red"> onclick<span class="attributevaluecolor" style="color:mediumblue">="startWorker()"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>Start Worker<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/button<span class="tagcolor" style="color:mediumblue">&gt;</span></span> <br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>button<span class="attributecolor" style="color:red"> onclick<span class="attributevaluecolor" style="color:mediumblue">="stopWorker()"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>Stop Worker<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/button<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>script<span class="tagcolor" style="color:mediumblue">&gt;</span></span><span class="jscolor" style="color:black"><br>
+<span class="jskeywordcolor" style="color:mediumblue">var</span> w;<br><span class="jsnumbercolor" style="color:red">
+</span><br>
+<span class="jskeywordcolor" style="color:mediumblue">function</span> startWorker()<span class="jsnumbercolor" style="color:red">
+</span>{<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp;
+<span class="jskeywordcolor" style="color:mediumblue">if</span> (<span class="jskeywordcolor" style="color:mediumblue">typeof</span>(Worker) !== <span class="jsstringcolor" style="color:brown">"undefined"</span>)<span class="jsnumbercolor" style="color:red">
+</span>{<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;&nbsp; <span class="jskeywordcolor" style="color:mediumblue">if</span> (<span class="jskeywordcolor" style="color:mediumblue">typeof</span>(w) == <span class="jsstringcolor" style="color:brown">"undefined"</span>) {<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; w = <span class="jskeywordcolor" style="color:mediumblue">new</span> Worker(<span class="jsstringcolor" style="color:brown">"demo_workers.js"</span>);<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp;&nbsp;&nbsp; }<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;&nbsp;&nbsp;w.<span class="jspropertycolor" style="color:black">onmessage</span> = <span class="jskeywordcolor" style="color:mediumblue">function</span>(<span class="jskeywordcolor" style="color:mediumblue">event</span>) {<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.<span class="jspropertycolor" style="color:black">getElementById</span>(<span class="jsstringcolor" style="color:brown">"result"</span>).<span class="jspropertycolor" style="color:black">innerHTML</span> = <span class="jskeywordcolor" style="color:mediumblue">event</span>.<span class="jspropertycolor" style="color:black">data</span>;<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;&nbsp;&nbsp;};<br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;}
+<span class="jskeywordcolor" style="color:mediumblue">else</span><span class="jsnumbercolor" style="color:red">
+</span>{<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp;&nbsp;&nbsp;
+document.<span class="jspropertycolor" style="color:black">getElementById</span>(<span class="jsstringcolor" style="color:brown">"result"</span>).<span class="jspropertycolor" style="color:black">innerHTML</span> = <span class="jsstringcolor" style="color:brown">"Sorry! No Web Worker support."</span>;<br><span class="jsnumbercolor" style="color:red">
+</span>  &nbsp;&nbsp;}<br><span class="jsnumbercolor" style="color:red">
+</span>}<br><span class="jsnumbercolor" style="color:red">
+</span><br>
+<span class="jskeywordcolor" style="color:mediumblue">function</span> stopWorker()<span class="jsnumbercolor" style="color:red">
+</span>{ <br><span class="jsnumbercolor" style="color:red">
+</span>&nbsp;&nbsp;w.<span class="jspropertycolor" style="color:black">terminate</span>();<br>&nbsp;&nbsp;w = undefined;<br><span class="jsnumbercolor" style="color:red">
+</span>}<br>
+</span><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/script<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/html<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webworker" class="w3-btn w3-margin-bottom" rel="nofollow">Спробуйте самі »</a>
+        </div>
+        <hr>
+        <h2>Веб-працівники та DOM</h2>
+        <p>Оскільки веб-працівники перебувають у зовнішніх файлах, вони не мають доступу до таких об'єктів JavaScript:</p>
+        <ul>
+            <li>Об'єкт вікна</li>
+            <li>Об'єкт документа</li>
+            <li>Батьківський об'єкт</li>
+        </ul>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_webstorage.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html5_serversentevents.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr class="hr-bottom">
+        <img src="../svg/warning_black.svg" alt="warning" width="30" class="img-left"><p class="note-warning"><b>Не викладайте</b> свій код безпосередньо в коментарях, він відображається некоректно. Скористайтесь такими сервісами, як <a href="https://jsfiddle.net/" target="_blank" rel="nofollow">jsfiddle.net</a>, <a href="https://codepen.io/pen/tour/welcome/start" target="_blank" rel="nofollow">codepen.io</a>, <a href="https://liveweave.com/" target="_blank" rel="nofollow">liveweave.com</a>, <a href="https://jsbin.com/?html,css,output" target="_blank" rel="nofollow">jsbin.com</a>, збережіть код на будь-якому з цих сервісів і в коментарях дайте на нього посилання. Так буде видно і код, і результат.</p>
+        <!-- Коментарі від Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = websunsay.github.io;  // канонічний URL сторінки
+                this.page.identifier = websunsay.github.io/html/html5_webworkers.html // унікальний ідентифікатор сторінки
+            };
+            (function() { // Не редагувати нижче цієї лінії
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-websunsay-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Будь ласка, увімкніть JavaScript для перегляду <a href="https://disqus.com/?ref_noscript">коментарів на основі Disqus.</a></noscript>
+        <!-- / Коментарі від Disqus -->
+    </div>
+    <!-- / CONTENT -->
+    <div class="right-sidebar">
+        <iframe src="../pages/source.html" class="frame-right-sidebar"></iframe>
+    </div>
+</main>
+<footer>
+    <iframe src="../pages/footer.html" class="frame-footer"></iframe>
+</footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>HTML. Мультимедіа - звук, музика, відео, фільми, анімація. W3schools українською. Уроки для початківців</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML,CSS,уроки,для початківців,html5,мультимедіа,на сайті,елементи,теги,звук,музика,відео,анімація,w3schools,українською" />
+    <meta name="description" content="Урок 46. HTML. Мультимедіа на сайті. Як додати мультимедійні елементи відео, аудіо, анімацію на веб-сторінку? W3Schools українською. Підручник для початківців" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ws.css" />
+    <link rel="stylesheet" href="../styles/handheld.css" />
+    <link rel="canonical" href="https://websunsay.github.io/" />
+    <meta property="og:title" content="HTML. Мультимедіа - звук, музика, відео, фільми, анімація. W3schools українською. Уроки для початківців" />
+    <meta property="og:type" content="веб-сайт" /> <!--описывает тип объекта на странице-->
+    <meta property="og:url" content="https://websunsay.github.io/" /><!--адрес сайта-->
+    <meta property="og:image" content="../image/html5_64x64.png" /><!--адрес картинки-->
+    <meta property="og:description" content="Урок 46. HTML. Мультимедіа на сайті. Як додати мультимедійні елементи відео, аудіо, анімацію на веб-сторінку? W3Schools українською. Підручник для початківців" />
+    <meta property="og:locale" content="uk" /> <!--мова сайту-->
+    <meta property="og:site_name" content="WebSunSay - W3Schools українською - Основи HTML, CSS, JavaScript, PHP для початківців" />
+    <script src="../js/topnav.js"></script>
+</head>
+<body>
+<iframe src="../pages/header.html" class="frame-header"></iframe>
+<main>
+    <div class="left-sidebar">
+        <iframe src="../pages/basichtml.html" class="frame-left-sidebar"></iframe>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>HTML. Мультимедіа</h1>
+        <p class="brief"><strong>Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців</strong></p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_svg.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html5_video.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr>
+        <p class="intro">Мультимедіа в Інтернеті - це звук, музика, відео, фільми та анімація.</p>
+        <hr>
+
+        <h2>Що таке мультимедіа?</h2>
+        <p>Мультимедіа поставляється в різних форматах. Це може бути майже все, що можна почути або побачити.</p>
+        <p>Приклади: зображення, музика, звук, відео, записи, фільми, анімація тощо.</p>
+        <p>Веб-сторінки часто містять мультимедійні елементи різних типів і форматів. </p>
+        <p>У цьому розділі ви дізнаєтеся про різні мультимедійні формати.</p>
+        <hr>
+        <h2>Підтримка браузерами</h2>
+        <p>Перші веб-браузери підтримували лише текст, обмежуючись одним шрифтом одного кольору.</p>
+        <p>Пізніше з'явилися браузери з підтримкою різних кольорів і шрифтів, і зображень!</p>
+        <p>Основні браузери обробляють аудіо, відео та анімацію по-різному. Підтримуються різні формати, а для деяких форматів потрібні додаткові допоміжні програми (плагіни) для роботи.</p>
+        <p>Сподіваємося, що це стане історією. Мультимедійні технології HTML5 обіцяють легше майбутнє для мультимедіа.</p>
+        <hr><h2>Формати мультимедіа</h2>
+        <p>Мультимедійні елементи (наприклад, аудіо чи відео) зберігаються у медіафайлах. </p>
+        <p>Найпоширенішим способом виявлення типу файлу є перегляд розширення файлу.</p>
+        <p>Мультимедійні файли мають такі формати та різні розширення: .swf, .wav, .mp3, .mp4, .mpg, .wmv, .avi.</p>
+        <hr>
+
+        <h2>Загальні формати відео</h2>
+        <table>
+            <tbody>
+            <tr>
+                <td style="width:225px"><img alt="Videoformats" src="../images/pic_video.jpg" width="196" height="109"></td>
+                <td style="vertical-align:top">MP4 є новим і наступним форматом для інтернет-відео.<br>
+                    <br>MP4 рекомендується сайтом YouTube.<br><br>MP4 підтримується Flash плеєрами.<br>
+                    <br>MP4 підтримується HTML5.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="w3-table-all notranslate">
+            <tbody>
+            <tr>
+                <th>Формат</th>
+                <th style="width:50px">Файл</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td>MPEG</td>
+                <td>.mpg<br>.mpeg</td>
+                <td>
+                    MPEG. Розроблено Moving Pictures Expert Group. Перший популярний відеоформат в Інтернеті. Використовувався для підтримки всіх веб-браузерів, але не підтримується в HTML5 (див. MP4).
+                </td>
+            </tr>
+            <tr>
+                <td>AVI</td>
+                <td>.avi</td>
+                <td>
+                    AVI (Audio Video Interleave). Розроблено компанією Microsoft. Зазвичай використовується у відеокамерах та телевізійному обладнанні. Відмінно відтворюється на комп'ютерах Windows, але не у веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>WMV</td>
+                <td>.wmv</td>
+                <td>
+                    WMV (Windows Media Video). Розроблено компанією Microsoft. Зазвичай використовується у відеокамерах та телевізійному обладнанні. Відмінно відтворюється на комп'ютерах Windows, але не у веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>QuickTime</td>
+                <td>.mov</td>
+                <td>
+                    QuickTime. Розроблено Apple. Зазвичай використовується у відеокамерах та телевізійному обладнанні. Відмінно відтворюється на комп'ютерах Apple, але не у веб-браузерах. (див. MP4)</td>
+            </tr>
+            <tr>
+                <td>RealVideo</td>
+                <td>.rm<br>.ram</td>
+                <td>
+                    RealVideo. Розроблено Real Media, що дозволяє здійснювати потокове відео з низькою пропускною здатністю. Він як і раніше використовується для онлайн-відео та інтернет-телебачення, але не відтворюється у веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>Flash</td>
+                <td>.swf<br>.flv</td>
+                <td>
+                    Flash. Розроблено компанією Macromedia. Часто потрібно мати додатковий компонент (плагін) для відтворення у веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>Ogg</td>
+                <td>.ogg</td>
+                <td>
+                    Theora Ogg. Розроблено Xiph.Org Foundation. Підтримується в HTML5.</td>
+            </tr>
+            <tr>
+                <td>WebM</td>
+                <td>.webm</td>
+                <td>
+                    WebM. Розроблено веб-гігантами Mozilla, Opera, Adobe і Google. Підтримується в HTML5.</td>
+            </tr>
+            <tr>
+                <td>MPEG-4<br>або MP4</td>
+                <td>.mp4</td>
+                <td>
+                    MP4. Розроблено Moving Pictures Expert Group. На основі QuickTime. Зазвичай використовується в нових відеокамерах і телевізійному обладнанні. Підтримуються всіма браузерами HTML5. Рекомендовано YouTube.
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="w3-panel w3-note">
+            <p><strong>Тільки відео в форматах MP4, WebM і Ogg підтримуються стандартом HTML5.</strong></p>
+        </div>
+        <hr>
+        <h2>Audio Formats</h2>
+        <p>MP3 - найновіший формат для записаної музики. Термін MP3 став синонімом цифрової музики.</p>
+        <p>Якщо на вашому веб-сайті розміщується записана музика, найкращий вибір - це MP3.</p>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th>Формат</th>
+                <th style="width:50px">Файл</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td>MIDI</td>
+                <td>.mid<br>.midi</td>
+                <td>
+                    MIDI (від анг. Musical Instrument Digital Interface - цифровий інтерфейс музичних інструментів). Головний формат для всіх електронних музичних пристроїв, таких як синтезатори і звукові карти ПК. Файли MIDI не містять звуку, а цифрові нотатки, які можуть відтворюватися електронікою. Відмінно відтворюється на всіх комп'ютерах та музичних пристроях, але не у веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>RealAudio</td>
+                <td>.rm<br>.ram</td>
+                <td>
+                    RealAudio. Розроблено Real Media, дозволяє передавати аудіо з низькою пропускною здатністю. Не відтворюється у веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>WMA</td>
+                <td>.wma</td>
+                <td>
+                    WMA (Windows Media Audio). Розроблено компанією Microsoft. Зазвичай використовується в музичних плеєрах. Відмінно відтворюється на комп'ютерах Windows, але не в веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>AAC</td>
+                <td>.aac</td>
+                <td>
+                    AAC (Advanced Audio Coding). Розроблено компанією Apple як стандартний формат для iTunes. Відмінно відтворюється на комп'ютерах Apple, але не у веб-браузерах.</td>
+            </tr>
+            <tr>
+                <td>WAV</td>
+                <td>.wav</td>
+                <td>
+                    WAV. Розроблено IBM і Microsoft. Відмінно відтворюється в операційних системах Windows, Macintosh і Linux. Підтримується HTML5.</td>
+            </tr>
+            <tr>
+                <td>Ogg</td>
+                <td>.ogg</td>
+                <td>
+                    Ogg. Розроблено Xiph.Org Foundation. Підтримується в HTML5.</td>
+            </tr>
+            <tr>
+                <td>MP3</td>
+                <td>.mp3</td>
+                <td>
+                    Файли MP3 - це звукова частина файлів MPEG. MP3 - найпопулярніший формат для музичних плеєрів. Поєднує в собі гарне стиснення (малі файли) з високою якістю. Підтримуються всіма браузерами.</td>
+            </tr>
+            <tr>
+                <td>MP4</td>
+                <td>.mp4</td>
+                <td>
+                    MP4 є відеоформатом, але також може використовуватися для аудіо. MP4 відео - це новий формат відео в Інтернеті, який вже стає основним. Це призводить до автоматичної підтримки MP4 аудіо у всіх браузерах.</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="w3-panel w3-note">
+            <p><strong>Стандарт HTML5 підтримує лише аудіофайли MP3, WAV та Ogg.</strong></p>
+        </div>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html5_svg.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="html5_video.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr class="hr-bottom">
+        <img src="../svg/warning_black.svg" alt="warning" width="30" class="img-left"><p class="note-warning"><b>Не викладайте</b> свій код безпосередньо в коментарях, він відображається некоректно. Скористайтесь такими сервісами, як <a href="https://jsfiddle.net/" target="_blank" rel="nofollow">jsfiddle.net</a>, <a href="https://codepen.io/pen/tour/welcome/start" target="_blank" rel="nofollow">codepen.io</a>, <a href="https://liveweave.com/" target="_blank" rel="nofollow">liveweave.com</a>, <a href="https://jsbin.com/?html,css,output" target="_blank" rel="nofollow">jsbin.com</a>, збережіть код на будь-якому з цих сервісів і в коментарях дайте на нього посилання. Так буде видно і код, і результат.</p>
+        <!-- Коментарі від Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = websunsay.github.io;  // канонічний URL сторінки
+                this.page.identifier = websunsay.github.io/html/html_media.html; // унікальний ідентифікатор сторінки
+            };
+            (function() { // Не редагувати нижче цієї лінії
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-websunsay-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Будь ласка, увімкніть JavaScript для перегляду <a href="https://disqus.com/?ref_noscript">коментарів на основі Disqus.</a></noscript>
+        <!-- / Коментарі від Disqus -->
+    </div>
+    <!-- / CONTENT -->
+    <div class="right-sidebar">
+        <iframe src="../pages/source.html" class="frame-right-sidebar"></iframe>
+    </div>
+</main>
+<footer>
+    <iframe src="../pages/footer.html" class="frame-footer"></iframe>
+</footer>
+</body>
+</html>

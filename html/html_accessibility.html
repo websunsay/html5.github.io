@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>HTML5/CSS3. HTML Accessibility. Доступність. W3schools українською. Уроки для початківців</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML,CSS,уроки,для початківців,html5,accessibility,доступність,w3schools,українською,мовою" />
+    <meta name="description" content="Уроки HTML5/CSS3. Доступність і використання. W3Schools українською. Підручник для початківців" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ws.css" />
+    <link rel="stylesheet" href="../styles/handheld.css" />
+    <link rel="canonical" href="https://websunsay.github.io/" />
+    <meta property="og:title" content="HTML5/CSS3. HTML Summary. Резюме. W3schools українською. Уроки для початківців" />
+    <meta property="og:type" content="веб-сайт" /> <!--описывает тип объекта на странице-->
+    <meta property="og:url" content="https://websunsay.github.io/" /><!--адрес сайта-->
+    <meta property="og:image" content="../image/html5_64x64.png" /><!--адрес картинки-->
+    <meta property="og:description" content="Уроки HTML5/CSS3. Ви вивчили HTML, тепер що вивчати? Які мови програмування та технології потрібні для веб-розробників? W3Schools українською. Підручник для початківців" />
+    <meta property="og:locale" content="uk" /> <!--мова сайту-->
+    <meta property="og:site_name" content="WebSunSay - W3Schools українською - Основи HTML, CSS, JavaScript, PHP для початківців" />
+    <script src="../js/topnav.js"></script>
+</head>
+<body>
+<iframe src="../pages/header.html" class="frame-header"></iframe>
+<main>
+    <div class="left-sidebar">
+        <iframe src="../pages/basichtml.html" class="frame-left-sidebar"></iframe>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>HTML Доступність </h1>
+        <p class="brief"><strong>Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців</strong></p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html_summary.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="../tags/element_reference.html" title="Наступна сторінка" rel="next">HTML Довідник ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr>
+
+        <h2>HTML Доступність</h2>
+        <p>Пишіть HTML з урахуванням доступності. Надайте користувачу гарний спосіб наваігації та взаємодії з вашим сайтом. Зробіть ваш HTML код якомога більш <strong>семантичним</strong>, щоб його було легко зрозуміти як відвідувачам, так і читачам екрану (скринрідерам).</p>
+        <hr>
+        <h2>Семантичний HTML</h2>
+        <p>Семантичний HTML означає максимально можливе використання правильних елементів HTML для їх правильного призначення. Семантичні елементи є елементами зі значенням; якщо вам потрібна кнопка, використовуйте елемент <code class="w3-codespan">&lt;button&gt;</code> (а не <code class="w3-codespan">&lt;div&gt;</code>).</p>
+
+            <div class="w3-half">
+                <div class="w3-example">
+                    <h3>Семантичний</h3>
+                    <div class="w3-code notranslate htmlHigh">
+                        <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>button<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Click Me<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/button<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+                    <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_accessibility_button" target="_blank" rel="nofollow">Спробуйте самі »</a>
+                </div>
+
+            </div>
+            <div class="w3-half">
+                <div class="w3-example">
+                    <h3>Не семантичний</h3>
+                    <div class="w3-code notranslate htmlHigh" style="border-color:red;">
+                        <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>div<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Click Me<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/div<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+                    <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_accessibility_button" target="_blank" rel="nofollow">Спробуйте самі »</a>
+                </div>
+            </div>
+
+        <p>Семантичний HTML дає контекст для скринрідерів, які читають вміст веб-сторінки вголос.</p>
+        <p>З прикладом кнопки на увазі:</p>
+        <ul>
+            <li>За замовчуванням кнопки мають більш відповідний стиль</li>
+            <li>Скринрідер ідентифікує його як кнопку</li>
+            <li>Фокусовані</li>
+            <li>Клікабельні</li>
+        </ul>
+        <p>Кнопка також доступна для людей, що покладаються на навігацію за допомогою клавіатури; на неї можна натискати як мишою, так і клавішами на клавіатурі, а також можна вводити вкладки між ними (за допомогою клавіші табуляції на клавіатурі).</p>
+        <p>Приклади <strong>не семантичних</strong> елементів: <code class="w3-codespan">&lt;div&gt;</code> та <code class="w3-codespan">&lt;span&gt;</code> - нічого не розповідають про свій зміст.</p>
+        <p>Приклади <strong>семантичних</strong> елементів: <code class="w3-codespan">&lt;form&gt;</code>, <code class="w3-codespan">&lt;table&gt;</code> та <code class="w3-codespan">&lt;article&gt;</code> - чітко визначають свій зміст.</p>
+        <hr>
+
+        <h2>Заголовки важливі</h2>
+        <p>Заголовки визначаються за допомогою тегів від <code class="w3-codespan">&lt;h1&gt;</code> до <code class="w3-codespan">&lt;h6&gt;</code>:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Heading 1<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h1<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h2<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Heading 2<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h2<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br>
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h3<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Heading 3<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h3<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h4<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Heading 4<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h4<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h5<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Heading 5<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h5<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>h6<span class="tagcolor" style="color:mediumblue">&gt;</span></span>Heading 6<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/h6<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+            <a target="_blank" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_headings" class="w3-btn w3-margin-bottom" rel="nofollow">Спробуйте самі »</a>
+        </div>
+
+        <p>Пошукові системи використовують заголовки для індексування структури та вмісту ваших веб-сторінок.</p>
+        <p>Користувачі переглядають ваші сторінки за заголовками. Важливо використовувати заголовки, щоб показати структуру документів та зв'язок між різними розділами.</p>
+        <p><code class="w3-codespan">&lt;h1&gt;</code> заголовки слід використовувати для основних заголовків, після чого слід використовувати <code class="w3-codespan">&lt;h2&gt;</code> заголовки, та менш важливі <code class="w3-codespan">&lt;h3&gt;</code> і так далі.</p>
+        <div class="w3-panel w3-note">
+            <p><strong>Примітка:</strong> Використовуйте заголовки HTML лише для заголовків. Не використовуйте заголовки просто для створення тексту <strong>ВЕЛИКИМ</strong> або <strong>жирним</strong>.</p>
+        </div>
+        <hr>
+
+        <h2>Альтернативний текст</h2>
+        <p>Атрибут <code class="w3-codespan">alt</code> надає альтернативний текст для зображення, якщо користувач з якоїсь причини не може його переглянути (через повільне з'єднання, помилку в атрибуті src або якщо користувач використовує скринрідер).</p>
+        <p>Значення атрибута <code class="w3-codespan">alt</code> має описувати зображення:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>img<span class="attributecolor" style="color:red"> src<span class="attributevaluecolor" style="color:mediumblue">="img_chania.jpg"</span> alt<span class="attributevaluecolor" style="color:mediumblue">="Flowers in Chania"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_alt_chania" target="_blank" rel="nofollow">Спробуйте самі »</a>
+        </div>
+        <p>Якщо браузер не може знайти зображення, він покаже значення атрибуту <code class="w3-codespan">alt</code>:</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>img<span class="attributecolor" style="color:red"> src<span class="attributevaluecolor" style="color:mediumblue">="wrongname.gif"</span> alt<span class="attributevaluecolor" style="color:mediumblue">="Flowers in Chania"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_images_wrongname" target="_blank">Спробуйте самі »</a>
+        </div>
+        <hr>
+
+        <h2>Оголошення мови</h2>
+        <p>Оголошення мови є важливим для скринрідерів та пошукових систем, і оголошується атрибутом <code class="w3-codespan">lang</code>. Використовуйте наведений нижче код для показу веб-сторінки англійською мовою:</p>
+        <div class="w3-example">
+            <div class="w3-code notranslate htmlHigh">
+                <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>!DOCTYPE<span class="attributecolor" style="color:red"> html</span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>html<span class="attributecolor" style="color:red"> lang<span class="attributevaluecolor" style="color:mediumblue">="en"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><br>
+                ...<br><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/body<span class="tagcolor" style="color:mediumblue">&gt;</span></span><br><span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/html<span class="tagcolor" style="color:mediumblue">&gt;</span></span>
+            </div>
+        </div>
+        <hr>
+
+        <h2>Використовуйте чисту мову</h2>
+        <p>Використовуйте чисту мову, яку легко зрозуміти, і намагайтеся уникати символів, які неможливо прочитати чітко за допомогою програми для читання з екрана (скринрідером). Наприклад:</p>
+        <ul>
+            <li>Зробіть речення якомога коротшими.</li>
+            <li>Уникайте тире. Замість того, щоб писати 1-3, запишіть так: від 1 до 3</li>
+            <li>Уникайте скорочень. Замість того, щоб писати Feb, пишіть February</li>
+            <li>Уникайте сленгових слів</li>
+        </ul>
+        <hr>
+
+        <h2>Пишіть хороші посилання</h2>
+        <p>Посилання має чітко пояснювати, яку інформацію читач отримає, натиснувши на це посилання.</p>
+        <p>Приклади хороших і поганих посилань:</p>
+        <div class="w3-row-padding" style="margin:-16px">
+
+            <div class="w3-col x l12 m6">
+                <div class="w3-example">
+                    <h3>Добре:</h3>
+                    <div class="w3-code notranslate htmlHigh noshadow" style="font-family: Verdana;font-size:15px">
+                        <p><a href="javascript:void(0)">Дізнатися більше про мову HTML</a></p>
+                        <p>Дізнатися більше про те, <a href="javascript:void(0)">як правильно харчуватися</a></p>
+                        <p><a href="javascript:void(0)">Придбати квитки на Марс тут</a></p>
+
+                    </div>
+                    <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_accessibility_links" target="_blank" rel="nofollow">Спробуйте самі »</a>
+                </div>
+
+            </div>
+            <div class="w3-col x l12 m6">
+                <div class="w3-example">
+                    <h3>Погано:</h3>
+                    <div class="w3-code notranslate htmlHigh noshadow" style="border-color:red;font-family: Verdana;font-size:15px">
+                        <p><a href="javascript:void(0)">Натисніть тут</a></p>
+                        <p><a href="javascript:void(0)">Дізнатись більше...</a></p>
+                        <p>Купити квитки на Марс <a href="javascript:void(0)">тут</a></p>
+                    </div>
+                    <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_accessibility_links" target="_blank" rel="nofollow">Спробуйте самі »</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <h2>Назви посилань</h2>
+        <p>Атрибут <code class="w3-codespan">title</code> визначає додаткову інформацію про елемент. Ця інформація найчастіше відображається як текст підказки, коли мишка переміщується над елементом.</p>
+        <div class="w3-example">
+            <h3>Приклад:</h3>
+            <div class="w3-code notranslate htmlHigh">
+  <span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>a<span class="attributecolor" style="color:red"> href<span class="attributevaluecolor" style="color:mediumblue">="https://www.w3schools.com/html/"</span> title<span class="attributevaluecolor" style="color:mediumblue">="Перейти на W3Schools HTML розділ"</span></span><span class="tagcolor" style="color:mediumblue">&gt;</span></span>Відвідайте наш HTML Підручник<span class="tagnamecolor" style="color:brown"><span class="tagcolor" style="color:mediumblue">&lt;</span>/a<span class="tagcolor" style="color:mediumblue">&gt;</span></span> </div>
+            <a class="w3-btn w3-margin-bottom" href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_links_title" target="_blank" rel="nofollow">Спробуйте самі »</a>
+        </div>
+
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="html_summary.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="../tags/element_reference.html" title="Наступна сторінка" rel="next">HTML Довідник ❯</a>
+        </div>
+        <!-- / buttons prev - next -->
+        <hr class="hr-bottom">
+        <img src="../svg/warning_black.svg" alt="warning" width="30" class="img-left"><p class="note-warning"><b>Не викладайте</b> свій код безпосередньо в коментарях, він відображається некоректно. Скористайтесь такими сервісами, як <a href="https://jsfiddle.net/" target="_blank" rel="nofollow">jsfiddle.net</a>, <a href="https://codepen.io/pen/tour/welcome/start" target="_blank" rel="nofollow">codepen.io</a>, <a href="https://liveweave.com/" target="_blank" rel="nofollow">liveweave.com</a>, <a href="https://jsbin.com/?html,css,output" target="_blank" rel="nofollow">jsbin.com</a>, збережіть код на будь-якому з цих сервісів і в коментарях дайте на нього посилання. Так буде видно і код, і результат.</p>
+        <!-- Коментарі від Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = websunsay.github.io;  // канонічний URL сторінки
+                this.page.identifier = websunsay.github.io/html/html_accessibility.html // унікальний ідентифікатор сторінки
+            };
+            (function() { // Не редагувати нижче цієї лінії
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-websunsay-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Будь ласка, увімкніть JavaScript для перегляду <a href="https://disqus.com/?ref_noscript">коментарів на основі Disqus.</a></noscript>
+        <!-- / Коментарі від Disqus -->
+    </div>
+    <!-- / CONTENT -->
+    <div class="right-sidebar">
+        <iframe src="../pages/source.html" class="frame-right-sidebar"></iframe>
+    </div>
+</main>
+<footer>
+    <iframe src="../pages/footer.html" class="frame-footer"></iframe>
+</footer>
+</body>
+</html>
