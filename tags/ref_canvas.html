@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>HTML Canvas. Полотно. Малювання. W3Schools українською. Основи HTML5 для початківців</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML,CSS,уроки,html5,css3,основи,canvas,довідник,малювання,W3C,reference" />
+    <meta name="description" content="Canvas - Полотно для малювання в HTML. Курс по основам HTML5 | CSS3. W3Schools українською. Підручник. Безкоштовні уроки для початківців" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/ws.css" />
+    <link rel="stylesheet" href="../styles/handheld.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/browserref.css">
+    <link rel="canonical" href="https://websunsay.github.io/" />
+    <meta property="og:title" content="HTML Canvas. Полотно. Малювання. W3Schools українською. Основи HTML5 для початківців" />
+    <meta property="og:type" content="Content" /> <!--описывает тип объекта на странице-->
+    <meta property="og:url" content="https://websunsay.github.io/" /><!--адрес сайта-->
+    <meta property="og:image" content="../image/html5_64x64.png" /><!--адрес картинки-->
+    <meta property="og:description" content="Canvas - Полотно для малювання в HTML. Курс по основам HTML5 | CSS3. W3Schools українською. Підручник. Безкоштовні уроки для початківців" />
+    <meta property="og:locale" content="uk" /> <!--мова сайту-->
+    <meta property="og:site_name" content="Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців" />
+    <script src="../js/topnav.js"></script>
+</head>
+<body>
+<iframe src="../pages/header.html" class="frame-header"></iframe>
+<main>
+
+    <div class="left-sidebar">
+        <iframe src="../pages/menuref.html" class="frame-left-sidebar"></iframe>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>HTML Canvas. Довідник</h1>
+        <p class="brief"><strong>Курс по основам HTML | CSS. W3Schools українською. Уроки для початківців</strong></p>
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="ref_colornames.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="ref_av_dom.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- buttons prev - next -->
+        <hr>
+
+        <h2>Опис</h2>
+        <p><em>Canvas</em> - перекладається з англ. <em>Полотно</em>.</p>
+        <p><strong>HTML5</strong> тег <code class="w3-codespan">&lt;canvas&gt;</code> використовується для малювання графіки на льоту, за допомогою скриптів (зазвичай JavaScript).</p>
+        <p>Однак елемент <code class="w3-codespan">&lt;canvas&gt;</code> не має власних можливостей малювання (він є лише контейнером для графіки) - ви повинні використовувати скрипти, щоб малювати графіку.</p>
+        <p>Метод <code class="w3-codespan">getContext()</code> повертає об'єкт, який надає методи і властивості для малювання в <strong>canvas</strong>.</p>
+        <p>Це посилання охоплюватиме властивості та методи об'єкта <code class="w3-codespan">getContext("2d")</code> який можна використовувати для малювання тексту, ліній, коробок, кіл і багато іншого - в <strong>canvas</strong>.</p>
+        <hr>
+
+        <h2>Підтримка браузерами</h2>
+        <p>Цифри в таблиці визначають першу версію браузера, яка повністю підтримує цей елемент.</p>
+        <table class="browserref notranslate">
+            <tbody><tr>
+                <th style="width:20%;font-size:16px;text-align:left;">Елемент</th>
+                <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+                <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:16%;" class="bsSafari" title="Safari"></th>
+                <th style="width:16%;" class="bsOpera" title="Opera"></th>
+            </tr>
+            <tr>
+                <td style="text-align:left;">&lt;canvas&gt;</td>
+                <td>4.0</td>
+                <td>9.0</td>
+                <td>2.0</td>
+                <td>3.1</td>
+                <td>9.0</td>
+            </tr>
+            </tbody></table>
+        <p>Internet Explorer 9, Firefox, Opera, Chrome і Safari підтримують <code class="w3-codespan">&lt;canvas&gt;</code> та його властивості і методи.</p>
+        <p><b>Примітка:</b> Internet Explorer 8 і більш ранні версії не підтримують елемент <code class="w3-codespan">&lt;canvas&gt;</code>.</p>
+        <hr>
+
+        <h2>Кольори, стилі і тіні</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Властивості</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_fillstyle.html">fillStyle</a></td>
+                <td>Встановлює або повертає колір, градієнт або шаблон, використовуваний для заповнення малюнка</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_strokestyle.html">strokeStyle</a></td>
+                <td>Встановлює або повертає колір, градієнт або шаблон для штрихів</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_shadowcolor.html">shadowColor</a></td>
+                <td>Встановлює або повертає колір для використання для тіней</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_shadowblur.html">shadowBlur</a></td>
+                <td>Встановлює або повертає рівень розмиття для тіней</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_shadowoffsetx.html">shadowOffsetX</a></td>
+                <td>Встановлює або повертає горизонтальну відстань тіні від форми</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_shadowoffsety.html">shadowOffsetY</a></td>
+                <td>Встановлює або повертає вертикальну відстань тіні від форми</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_createlineargradient.html">
+                    createLinearGradient()</a></td>
+                <td>Створює лінійний градієнт (для використання на вмісті canvas)</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_createpattern.html">createPattern()</a></td>
+                <td>Повторює вказаний елемент у вказаному напрямку</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_createradialgradient.html">createRadialGradient()</a></td>
+                <td>Створює радіальний / круговий градієнт (для використання на вмісті canvas)</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_addcolorstop.html">addColorStop()</a></td>
+                <td>Визначає кольори та позиції зупинки в об'єкті градієнта</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+
+        <h2>Стилі рядків</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Властивості</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_linecap.html">lineCap</a></td>
+                <td>Встановлює або повертає стиль заголовних букв для рядка</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_linejoin.html">lineJoin</a></td>
+                <td>Встановлює або повертає тип створеного кута, коли зустрічаються дві лінії</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_linewidth.html">lineWidth</a></td>
+                <td>Встановлює або повертає поточну ширину рядка</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_miterlimit.html">miterLimit</a></td>
+                <td>Встановлює або повертає максимальну довжину митри (скосу)</td>
+            </tr>
+            </tbody></table>
+        <h2>Прямокутники</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_rect.html">rect()</a></td>
+                <td>Створює прямокутник</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_fillrect.html">fillRect()</a></td>
+                <td>Малює "заповнений" прямокутник</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_strokerect.html">strokeRect()</a></td>
+                <td>Малює прямокутник (без заливки)</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_clearrect.html">clearRect()</a></td>
+                <td>Очищає вказані пікселі в межах даного прямокутника</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Контури</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_fill.html">fill()</a></td>
+                <td>Заповнює поточний малюнок (контур)</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_stroke.html">stroke()</a></td>
+                <td>Фактично малює визначений вами контур</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_beginpath.html">beginPath()</a></td>
+                <td>Починається контур або скидається поточний контур</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_moveto.html">moveTo()</a></td>
+                <td>Переміщує контур до зазначеної точки на полотні, не створюючи рядка</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_closepath.html">closePath()</a></td>
+                <td>Створює контур від поточної точки до початкової точки</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_lineto.html">lineTo()</a></td>
+                <td>Додає нову точку і створює лінію до цієї точки з останньої вказаної точки на полотні</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_clip.html">clip()</a></td>
+                <td>Закріплює область будь-якої форми і розміру з оригінального полотна</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_quadraticcurveto.html">quadraticCurveTo()</a></td>
+                <td>Створює квадратичну криву Безьє</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_beziercurveto.html">bezierCurveTo()</a></td>
+                <td>Створює кубічну криву Безьє</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_arc.html">arc()</a></td>
+                <td>Створює дугу/криву (використовується для створення кіл або частин кіл)</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_arcto.html">arcTo()</a></td>
+                <td>Створює дугу/криву між двома дотичними</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_ispointinpath.html">isPointInPath()</a></td>
+                <td>Повертає true, якщо вказана точка знаходиться в поточному контурі, інакше false</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Трансформації</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_scale.html">scale()</a></td>
+                <td>Масштабує поточний малюнок, роблячи більшим або меншим</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_rotate.html">rotate()</a></td>
+                <td>Повертає поточний малюнок</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_translate.html">translate()</a></td>
+                <td>Змінює позицію (0,0) на полотні</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_transform.html">transform()</a></td>
+                <td>Замінює поточну матрицю перетворення для креслення</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_settransform.html">setTransform()</a></td>
+                <td>Скидає поточне перетворення на ідентичну матрицю. Потім запускається <a href="canvas_transform.html"> transform()</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Текст</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Властивості</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_font.html">font</a></td>
+                <td>Встановлює або повертає поточні властивості шрифту для текстового вмісту</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_textalign.html">textAlign</a></td>
+                <td>Встановлює або повертає поточне вирівнювання для текстового вмісту</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_textbaseline.html">textBaseline</a></td>
+                <td>Встановлює або повертає поточну текстову базову лінію, яка використовується при малюванні тексту</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_filltext.html">fillText()</a></td>
+                <td>Малює "заповнений" текст (із заливкою) на полотні</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_stroketext.html">strokeText()</a></td>
+                <td>Малює текст на полотні (без заливки)</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_measuretext.html">measureText()</a></td>
+                <td>Повертає об'єкт, який містить ширину вказаного тексту</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Малювання зображення</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_drawimage.html">drawImage()</a></td>
+                <td>Малює зображення, полотно або відео на полотні</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Піксельна маніпуляція</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Властивості</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_imagedata_width.html">width</a></td>
+                <td>Повертає ширину об'єкта ImageData</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_imagedata_height.html">height</a></td>
+                <td>Повертає висоту об'єкта ImageData</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_imagedata_data.html">data</a></td>
+                <td>Повертає об'єкт, який містить дані зображення вказаного об'єкта ImageData</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_createimagedata.html">createImageData()</a></td>
+                <td>Створює новий, порожній об'єкт ImageData</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_getimagedata.html">getImageData()</a></td>
+                <td>Повертає об'єкт ImageData, який копіює піксельні дані для заданого прямокутника на полотні</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_putimagedata.html">putImageData()</a></td>
+                <td>Повертає дані зображення (із зазначеного об'єкта ImageData) назад на полотно</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Композиція</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Властивості</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td><a href="canvas_globalalpha.html">globalAlpha</a></td>
+                <td>Встановлює або повертає поточне значення альфа або прозорості малюнка</td>
+            </tr>
+            <tr>
+                <td><a href="canvas_globalcompositeoperation.html">globalCompositeOperation</a></td>
+                <td>Встановлює або повертає спосіб малювання нового зображення на існуючому зображенні.</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Інше</h2>
+        <table class="w3-table-all notranslate">
+            <tbody><tr>
+                <th style="width:25%">Метод</th>
+                <th>Опис</th>
+            </tr>
+            <tr>
+                <td>save()</td>
+                <td>Зберігає стан поточного контексту</td>
+            </tr>
+            <tr>
+                <td>restore()</td>
+                <td>Повертає раніше збережений стан контуру і атрибути</td>
+            </tr>
+            <tr>
+                <td>createEvent()</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>getContext()</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>toDataURL()</td>
+                <td>&nbsp;</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <hr>
+        <!-- buttons prev - next -->
+        <div class="w3-clear nextprev">
+            <a class="w3-left w3-btn" href="ref_colornames.html" title="Попередня сторінка" rel="prev">❮ Prev</a>
+            <a class="w3-right w3-btn" href="ref_av_dom.html" title="Наступна сторінка" rel="next">Next ❯</a>
+        </div>
+        <!-- buttons prev - next -->
+        <hr class="hr-bottom">
+        <img src="../svg/warning_black.svg" alt="warning" width="30" class="img-left"><p class="note-warning"><b>Не викладайте</b> свій код безпосередньо в коментарях, він відображається некоректно. Скористайтесь такими сервісами, як <a href="https://jsfiddle.net/" target="_blank" rel="nofollow">jsfiddle.net</a>, <a href="https://codepen.io/pen/tour/welcome/start" target="_blank" rel="nofollow">codepen.io</a>, <a href="https://liveweave.com/" target="_blank" rel="nofollow">liveweave.com</a>, <a href="https://jsbin.com/?html,css,output" target="_blank" rel="nofollow">jsbin.com</a>, збережіть код на будь-якому з цих сервісів і в коментарях дайте на нього посилання. Так буде видно і код, і результат.</p>
+        <!-- Коментарі від Disqus -->
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+                this.page.url = websunsay.github.io;  // канонічний URL сторінки
+                this.page.identifier = websunsay.github.io/tags/ref_canvas.html // унікальний ідентифікатор сторінки
+            };
+            (function() { // Не редагувати нижче цієї лінії
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-websunsay-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Будь ласка, увімкніть JavaScript для перегляду <a href="https://disqus.com/?ref_noscript">коментарів на основі Disqus.</a></noscript>
+        <!-- / Коментарі від Disqus -->
+    </div>
+    <!-- / CONTENT -->
+    <div class="right-sidebar">
+        <iframe src="../pages/source.html" class="frame-right-sidebar"></iframe>
+    </div>
+</main>
+<footer>
+    <iframe src="../pages/footer.html" class="frame-footer"></iframe>
+</footer>
+</body>
+</html>
